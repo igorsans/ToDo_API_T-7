@@ -1,7 +1,9 @@
 import express from "express";
-import controller_tarefas from "./controllers/tarefas.js";
+import tarefasController from "./controllers/tarefasController.js";
+import usuariosController from "./controllers/usuariosController.js";
 
 const app = express()
+app.use(express.json())
 const port = 3000;
 
 app.listen(port, () => {
@@ -9,4 +11,5 @@ app.listen(port, () => {
 })
 
 
-controller_tarefas(app)
+tarefasController(app)
+usuariosController(app)
