@@ -5,7 +5,7 @@ const usuariosController = (app) => {
     const resposta = usuariosModel.mostarTodos()
     res.status(resposta.status).send(resposta.dados);
   });
-  app.get("/usuarios/:email", (req, res) => {
+  app.get("/usuarios/email/:email", (req, res) => {
     const resposta = usuariosModel.mostrarUm(req.params.email)
     res.status(resposta.status).send(resposta.dados);
   });
@@ -13,7 +13,7 @@ const usuariosController = (app) => {
     const resposta = usuariosModel.armazenar(req.body)
     res.status(resposta.status).send(resposta.dados);
   });
-  app.delete("/usuarios/:email", (req, res) => {
+  app.delete("/usuarios/email/:email", (req, res) => {
     const resposta = usuariosModel.deletar(req.params.email)
     res.status(resposta.status).send(resposta.dados)
   } )

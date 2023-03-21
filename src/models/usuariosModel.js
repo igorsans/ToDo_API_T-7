@@ -23,11 +23,7 @@ const usuariosModel = {
     };
   },
   mostrarUm: (param) => {
-    const data = bd.usuarios.map((item) => {
-      if (item.email == param) {
-        return item;
-      }
-    });
+    const data = bd.usuarios.find((usuario) => usuario.email === param);
     return {
       dados: {
         msg: data,
@@ -36,12 +32,9 @@ const usuariosModel = {
     };
   },
   deletar: (param) => {
-    const data = bd.usuarios.map((item) => {
-      if (item.email !== param) {
-        return item;
-      }
-    });
-    bd.usuarios = data;
+    const data = bd.usuarios.find(usuario => usuario.email === param)
+    const index = bd.usuarios.indexOf(data)
+    bd.usuarios.splice(index, 1)
     return {
       dados: {
         msg: `usuario com parametro : ${param} deletado com sucesso`,
