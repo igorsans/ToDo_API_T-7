@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "nodemon ./src/server.js",
     "bdon" : "node ./src/infra/bdconnect.js",
-    "bdoff" : "node ./src/infra/bddisconnect.js"
+    "bdoff" : "node ./src/infra/bddisconnect.js",
+    "tabelaUsuarios" : "node ./src/infra/usuariosCreateAndPopulate.js"
   }
 }
