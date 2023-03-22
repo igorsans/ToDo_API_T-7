@@ -3,9 +3,9 @@ import bd from "../infra/bd.js";
 const usuariosModel = {
   modelar: (obj) => {
     return {
+      id: obj.id,
       nome: obj.nome,
-      email: obj.email,
-      senha: obj.senha,
+      email: obj.email
     };
   },
   armazenar: (obj) => {
