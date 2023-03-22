@@ -26,7 +26,7 @@ class UsuariosDAO {
     }
     return {
       dados: { msg: "usuario inserido com sucesso na tabela usuarios" },
-      status: 200,
+      status: 201,
     };
   }
 }
